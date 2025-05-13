@@ -1,0 +1,90 @@
+.main {
+  position: relative;
+}
+
+.selectionValue {
+  width: 100%;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+}
+
+.selectionValue img {
+  transition: transform 0.15s ease;
+}
+
+.selectionValue:hover img {
+  transform: translateY(2px);
+}
+
+.countriesDropdown {
+  width: 250px;
+  max-width: 90vw;
+  height: 350px;
+  padding: 5px 0;
+  overflow: auto;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(78, 170, 180, 0.3);
+
+  transform-origin: 0 0;
+  z-index: 999;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: -20px;
+
+  display: flex;
+  flex-direction: column;
+
+  animation: popup 0.15s ease forwards;
+}
+
+.countriesDropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.countriesDropdown::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0.5;
+    scale: 0.9;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.option {
+  width: 100%;
+  white-space: wrap;
+  padding: 5px;
+  border-bottom: 1px solid rgba(78, 170, 180, 0.3);
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.8);
+
+  transition: background-color 0.15s ease;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+.option:hover {
+  background-color: #f5f5f5;
+}
+
+.option.active {
+  background-color: #f7e8e8;
+}

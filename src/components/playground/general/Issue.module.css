@@ -1,0 +1,119 @@
+.IssueBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #9cc5bc3d;
+  cursor: pointer;
+
+  position: absolute !important;
+  top: 18px;
+  left: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.15s ease;
+}
+
+.IssueBtn:hover {
+  background: white;
+}
+
+.formTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 33.73px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.issueDescTextarea {
+  min-height: 138px;
+  padding: 16px;
+  border-radius: 16px;
+  resize: vertical;
+  border: 1px solid #4ea9b4;
+  box-shadow: 0px 5px 10px 0px #0000001a;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.98px;
+  color: var(--color-text);
+}
+
+.action {
+  margin-top: 8px;
+  min-height: 44px;
+
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.sendBtn,
+.cancelBtn {
+  width: 303px;
+  max-width: calc(50% - 6px);
+  border-radius: 100px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.98px;
+  color: white;
+
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendBtn {
+  background-color: var(--color-sec);
+}
+
+.cancelBtn {
+  background-color: var(--color-back-orange);
+}
+
+@media (max-width: 950px) {
+  .IssueBtn {
+    width: 50px;
+    height: 50px;
+
+    top: 13px;
+    left: 13px;
+  }
+
+  .IssueBtn img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .formTitle {
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .issueDescTextarea {
+    padding: 10px;
+    border-radius: 10px;
+
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px), (max-height: 520px) {
+  .IssueBtn {
+    width: 40px;
+    height: 40px;
+
+    top: 8px;
+    left: 8px;
+  }
+
+  .IssueBtn img {
+    width: 20px;
+    height: 20px;
+  }
+}

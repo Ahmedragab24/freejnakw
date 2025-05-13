@@ -1,0 +1,45 @@
+.main {
+  width: 340px;
+}
+
+.promptText {
+  margin-bottom: 24px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 29.98px;
+  text-align: center;
+  color: var(--color-text);
+}
+.action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  height: 44px;
+  border-radius: 100px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.98px;
+  text-align: center;
+  color: #ffffff;
+
+  flex: 1 0 45%;
+
+  transition: scale 0.15s ease;
+}
+
+.btn:active {
+  scale: 0.9;
+}
+
+.yesBtn {
+  background: var(--color-sec);
+}
+
+.cancelBtn {
+  background: var(--color-back-orange);
+}

@@ -1,0 +1,47 @@
+.main {
+  display: none;
+}
+
+.main.show {
+  display: block;
+}
+
+.main > p:first-of-type {
+  font-weight: 600;
+}
+
+.description {
+  width: 95%;
+  max-width: 882px;
+  margin: 0 auto 60px auto;
+  padding: 24px;
+  border-radius: 30px;
+  background-color: var(--color-back);
+
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 44.98px;
+  color: var(--color-text-1);
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .description {
+    padding: 20px;
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .description {
+    margin-bottom: 16px;
+    padding: 24px 11.5px;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 29.98px;
+  }
+}

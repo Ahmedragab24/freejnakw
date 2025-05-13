@@ -1,0 +1,45 @@
+.main {
+  /* padding-top: 120px; */
+
+  overflow-y: hidden;
+  position: relative;
+}
+
+.grid {
+  width: fit-content;
+  max-width: 700px;
+  margin: 120px auto 300px 200px;
+}
+
+.backVector {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  translate: 20% -50%;
+}
+
+.frontVector {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+@media (max-width: 1350px) {
+  .grid {
+    width: 90%;
+    margin: 120px auto 300px auto;
+  }
+
+  .vectorsContainer,
+  .backVector,
+  .frontVector {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .grid {
+    margin: 50px auto;
+  }
+}

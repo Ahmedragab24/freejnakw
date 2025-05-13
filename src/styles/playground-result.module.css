@@ -1,0 +1,74 @@
+.main {
+  padding: 30px 5vw;
+
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roabState {
+  background-color: var(--color-text);
+}
+
+.roabVector1 {
+  width: 27.63vw;
+  opacity: 0.3;
+
+  position: fixed;
+  top: 13.13vh;
+  right: -6.74vw;
+}
+
+.roabVector2 {
+  width: 58.4vw;
+  opacity: 0.6;
+
+  position: fixed;
+  top: 25vh;
+  left: -5.9vw;
+}
+
+.roabVector3 {
+  width: 34.58vw;
+  opacity: 0.3;
+
+  position: fixed;
+  top: 74.79vh;
+  left: 2.7vw;
+}
+
+.roabVector4 {
+  width: 22vw;
+  opacity: 0.6;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1300px) {
+  .main {
+    padding: 30px 3vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    padding: 30px 20px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-height: 700px) {
+  .main {
+    padding: 10px 20px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    padding: 10px 7.5vw;
+  }
+}

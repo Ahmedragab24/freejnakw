@@ -1,0 +1,46 @@
+.main {
+  width: 658px;
+}
+
+.promptText {
+  margin-bottom: 40px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 33.73px;
+  text-align: center;
+  color: #1a2626;
+}
+
+.actionBtns {
+  height: 44px;
+
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  border-radius: 30px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.98px;
+  text-align: center;
+  color: white;
+
+  flex: 1 0 45%;
+
+  transition: scale 0.15s ease;
+}
+
+.btn:active {
+  scale: 0.9;
+}
+
+.resumeBtn {
+  background: #4ea9b4;
+}
+
+.startNewBtn {
+  background: #e04b20;
+}

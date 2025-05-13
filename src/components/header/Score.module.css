@@ -1,0 +1,67 @@
+.main {
+  min-width: max-content;
+  padding: 12px 20px;
+  border-radius: 100px;
+  background-color: var(--color-sec);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.plusSign {
+  cursor: pointer;
+
+  transition-property: scale;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+}
+
+.plusSign:hover {
+  scale: 1.1;
+}
+
+.plusSign:active {
+  transition-timing-function: var(--timing-func-elastic);
+
+  scale: 0.9;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 29.98px;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.scoreNumber {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  color: var(--color-pri);
+}
+
+@media (max-width: 900px) {
+  .main {
+    z-index: 2;
+  }
+}
+
+@media (max-width: 900px) and (min-height: 520px) {
+  .main {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    height: 54px;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,152 @@
+.title {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 74.96px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.pagesContainer {
+  width: 92%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 4.48vw;
+  border-radius: 60px;
+  background: #ffffff;
+  box-shadow: 6px 6px 13px 0px #00000040;
+}
+
+.pagesNav {
+  height: 77px;
+  width: 100%;
+  max-width: 685px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  border-radius: 30px;
+  background: var(--color-back-orange);
+
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navItem {
+  width: 50%;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 44.98px;
+  text-align: center;
+  color: #ffffff;
+
+  z-index: 2;
+
+  transition: font-weight 0.3s ease;
+}
+
+.navItem:hover {
+  font-weight: 700;
+}
+
+.navItem.active {
+  font-weight: 700;
+}
+
+.activeBackground {
+  display: block;
+  width: 60%;
+  height: 100%;
+  border-radius: 30px;
+  background: var(--color-sec);
+
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: -60%;
+
+  transition: right 0.3s ease;
+}
+
+.pagesNav:has(.navItem:first-of-type:hover, .navItem:first-of-type.active)
+  .activeBackground {
+  right: 0;
+}
+
+.pagesNav:has(.navItem:last-of-type:hover, .navItem:last-of-type.active)
+  .activeBackground {
+  right: 40%;
+}
+
+@media (max-width: 730px) {
+  .pagesNav {
+    justify-content: space-between;
+  }
+
+  .activeBackground {
+    width: 50%;
+  }
+
+  .pagesNav:has(.navItem:last-of-type:hover, .navItem:last-of-type.active)
+    .activeBackground {
+    right: 50%;
+  }
+}
+
+@media (max-width: 530px) {
+  .pagesContainer {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .navItem {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .activeBackground {
+    width: 50%;
+  }
+
+  .pagesNav:has(.navItem:last-of-type:hover, .navItem:last-of-type.active)
+    .activeBackground {
+    right: 50%;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .title {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 44.98px;
+    text-align: center;
+  }
+
+  .pagesContainer {
+    padding: 24px 4vw;
+  }
+
+  .pagesNav {
+    height: 63.35px;
+    margin-bottom: 16px;
+  }
+
+  .navItem {
+    font-size: 19.76px;
+    font-weight: 500;
+    line-height: 37.03px;
+    text-align: center;
+  }
+}

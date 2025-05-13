@@ -1,0 +1,129 @@
+.main {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main * {
+  z-index: 2;
+}
+
+.navMenuIcon {
+  cursor: pointer;
+  transition: scale 0.1s ease;
+}
+
+.navMenuIcon:active {
+  scale: 0.9;
+}
+
+.navMenu {
+  display: none;
+
+  width: 200px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: var(--color-pri);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  position: absolute;
+  top: calc(100% + 15px);
+  right: -10px;
+
+  flex-direction: column;
+}
+
+.navMenu.active {
+  display: flex;
+  animation: nav-menu-popup 0.3s ease forwards;
+}
+
+.navItem {
+  min-width: max-content;
+  padding: 5px 20px;
+
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text);
+
+  transition: 0.2s ease;
+}
+
+.navItem.active {
+  color: var(--color-sec);
+}
+
+.navItem:hover {
+  color: white;
+  background-color: var(--color-sec);
+}
+
+@media (max-width: 900px) and (min-height: 520px) {
+  .main {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navMenuIcon {
+    display: none;
+  }
+
+  .navMenu {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    box-shadow: none;
+
+    z-index: 1;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .navItem {
+    min-height: 80px;
+    width: 250px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.06);
+
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .navItem.active {
+    background-color: var(--color-pri);
+    color: var(--color-sec);
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .navItem {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26.24px;
+  }
+}
+
+@keyframes nav-menu-popup {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

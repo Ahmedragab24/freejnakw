@@ -1,0 +1,164 @@
+.main {
+  margin-bottom: 100px;
+}
+
+.title {
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 16px 24px;
+  border-radius: 100px;
+
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 89.95px;
+  color: var(--color-text);
+
+  position: relative;
+}
+
+.title:after {
+  content: url("/vectors/title-line.svg");
+  display: block;
+  width: fit-content;
+
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 24px);
+  translate: 0 -50%;
+}
+
+.title:before {
+  content: url("/vectors/title-line.svg");
+  display: block;
+  width: fit-content;
+  rotate: 180deg;
+
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 24px);
+  translate: 0 -50%;
+}
+
+.cardsContainer {
+  padding: 0 4.16vw;
+  direction: ltr;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.38vw;
+  row-gap: 3.45vw;
+}
+
+.cardsContainer.small {
+  padding: 0 4.79vw;
+  row-gap: 2.85vw;
+}
+
+@media (max-width: 1350px) {
+  .cardsContainer.small {
+    padding: 0 3vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cardsContainer {
+    padding: 0 3vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cardsContainer {
+    column-gap: 1.6vw;
+    row-gap: 4vw;
+  }
+
+  .cardsContainer.small {
+    row-gap: 3.2vw;
+  }
+}
+
+@media (max-width: 950px) {
+  .title {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 15.5px;
+    padding: 16px 24px;
+    border-radius: 100px;
+
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 45px;
+  }
+
+  .title:after {
+    max-height: 37px;
+
+    transform-origin: left;
+    transform: scale(0.85);
+
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 8px);
+    translate: 0 -50%;
+  }
+
+  .title:before {
+    max-height: 37px;
+
+    transform-origin: right;
+    transform: scale(0.85);
+
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 8px);
+    translate: -85% -50%;
+  }
+}
+
+@media (max-width: 660px) {
+  .cardsContainer {
+    column-gap: 1.9vw;
+    row-gap: 5vw;
+  }
+
+  .cardsContainer.small {
+    row-gap: 3.8vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardsContainer {
+    column-gap: 3vw;
+    row-gap: 7.5vw;
+  }
+
+  .cardsContainer.small {
+    row-gap: 5.5vw;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    margin-bottom: 28px;
+  }
+
+  .cardsContainer {
+    padding: 0 4.16vw;
+    direction: ltr;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.38vw;
+    row-gap: 3.45vw;
+  }
+
+  .cardsContainer.small {
+    padding: 0 4.79vw;
+    row-gap: 2.85vw;
+  }
+}

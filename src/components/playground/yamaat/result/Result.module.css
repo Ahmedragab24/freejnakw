@@ -1,0 +1,654 @@
+.main {
+  width: 100%;
+  position: relative;
+}
+
+.winnerVector,
+.drawVector {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+}
+
+.winnerVector {
+  width: 300px;
+  height: auto;
+  aspect-ratio: 376 / 389;
+
+  bottom: 106px;
+}
+
+.drawVector {
+  width: 43vw;
+  height: auto;
+  aspect-ratio: 290 / 164;
+
+  z-index: 1;
+
+  top: calc(50% + 75px);
+  transform: translateY(-50%);
+}
+
+.title {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.main.draw .title {
+  text-shadow: 0 0 10px var(--color-sec), 0 0 20px var(--color-sec);
+}
+
+.winnerTeam {
+  margin-bottom: 3vh;
+
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 90px;
+  text-align: center;
+  color: var(--color-sec);
+}
+
+.main.draw .winnerTeam {
+  margin-bottom: 0;
+
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 101.2px;
+  text-align: center;
+  color: var(--color-back-yellow);
+}
+
+.winnerTeam.limitExc {
+  font-size: 30px;
+}
+
+.teamsScoresContainer {
+  width: 100%;
+  margin-bottom: 7vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team1ScoreContainer,
+.team2ScoreContainer {
+  width: 370px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.teamName,
+.teamScore {
+  height: 106px;
+  border-radius: 100px;
+  z-index: 2;
+
+  font-size: 49.61px;
+  font-weight: 700;
+  line-height: 92.97px;
+  color: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamName.limitExc {
+  font-size: 25px;
+}
+
+.teamScore {
+  direction: ltr;
+}
+
+.team1ScoreContainer :where(.teamName, .teamScore) {
+  background-color: var(--color-sec);
+}
+
+.team2ScoreContainer .teamName {
+  background-color: var(--color-pri);
+}
+
+.team2ScoreContainer .teamScore {
+  background: transparent;
+  border: 5px solid #eae1c5;
+}
+
+.replayBtn {
+  width: 380px;
+  height: 106px;
+  margin: 0 auto;
+  border-radius: 100px;
+  background-color: var(--color-back-orange);
+  position: relative;
+  z-index: 2;
+
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 86.2px;
+  color: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1300px) {
+  .winnerVector {
+    width: 280px;
+
+    bottom: 85px;
+  }
+
+  .title {
+    font-size: 60px;
+    line-height: 100px;
+  }
+
+  .winnerTeam {
+    font-size: 60px;
+    line-height: 100px;
+  }
+
+  .main.draw .winnerTeam {
+    margin-bottom: 0;
+
+    font-size: 48px;
+    line-height: 90px;
+  }
+
+  .winnerTeam.limitExc {
+    font-size: 30px;
+  }
+
+  .teamsScoresContainer {
+    margin-bottom: 10vh;
+  }
+
+  .team1ScoreContainer,
+  .team2ScoreContainer {
+    width: 300px;
+    gap: 15px;
+  }
+
+  .teamName,
+  .teamScore {
+    height: 85px;
+
+    font-size: 40px;
+    line-height: 85px;
+  }
+
+  .teamName.limitExc {
+    font-size: 22px;
+  }
+
+  .replayBtn {
+    width: 300px;
+    height: 85px;
+
+    font-size: 36px;
+    line-height: 85px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .winnerVector {
+    width: 250px;
+
+    bottom: 75px;
+  }
+
+  .title {
+    font-size: 45px;
+    line-height: 85px;
+  }
+
+  .winnerTeam {
+    font-size: 47px;
+    line-height: 85px;
+  }
+
+  .winnerTeam.limitExc {
+    font-size: 25px;
+  }
+
+  /* .main.draw .winnerTeam {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .main.draw .teamsScoresContainer {
+    margin-bottom: 60px;
+    gap: 15px;
+  } */
+
+  .team1ScoreContainer,
+  .team2ScoreContainer {
+    width: 250px;
+    gap: 10px;
+  }
+
+  /* .main.draw :where(.team1ScoreContainer, .team2ScoreContainer) {
+    flex-grow: 1;
+  } */
+
+  .teamName,
+  .teamScore {
+    height: 75px;
+
+    font-size: 32px;
+    line-height: 75px;
+  }
+
+  .teamName.limitExc {
+    font-size: 18px;
+  }
+
+  .replayBtn {
+    width: 250px;
+    height: 75px;
+
+    font-size: 27px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width: 850px) {
+  .winnerVector {
+    bottom: 55px;
+  }
+
+  .drawVector {
+    top: calc(50% + 35px);
+  }
+
+  .title {
+    font-size: 35px;
+    line-height: 75px;
+  }
+
+  .winnerTeam {
+    margin-bottom: 50px;
+
+    font-size: 40px;
+    line-height: 70px;
+  }
+
+  .main.draw .winnerTeam {
+    font-size: 33px;
+    line-height: 60px;
+  }
+
+  .teamsScoresContainer {
+    margin-bottom: 13vh;
+  }
+
+  .team1ScoreContainer,
+  .team2ScoreContainer {
+    width: 200px;
+    gap: 7px;
+  }
+
+  .teamName,
+  .teamScore {
+    height: 55px;
+
+    font-size: 26px;
+    line-height: 60px;
+  }
+
+  .teamName.limitExc {
+    font-size: 14px;
+  }
+
+  .replayBtn {
+    width: 200px;
+    height: 55px;
+
+    font-size: 22px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 710px) {
+  .winnerVector {
+    width: 200px;
+    bottom: 55px;
+  }
+
+  .drawVector {
+    top: calc(50% + 100px);
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  .winnerTeam {
+    margin-bottom: 25px;
+
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .main.draw .winnerTeam {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  .winnerTeam.limitExc {
+    font-size: 20px;
+  }
+
+  .teamsScoresContainer {
+    margin-bottom: 220px;
+    gap: 10px;
+  }
+
+  .team1ScoreContainer,
+  .team2ScoreContainer {
+    width: 200px;
+    gap: 10px;
+
+    flex-grow: 1;
+  }
+
+  .teamName,
+  .teamScore {
+    height: 55px;
+
+    font-size: 26px;
+    line-height: 60px;
+  }
+
+  .teamName.limitExc {
+    font-size: 12px;
+  }
+
+  .replayBtn {
+    width: 200px;
+    height: 55px;
+
+    font-size: 22px;
+    line-height: 50px;
+  }
+}
+
+@media (max-height: 700px) {
+  .winnerVector {
+    width: 220px;
+    bottom: 55px;
+  }
+
+  .drawVector {
+    width: 370px;
+
+    top: calc(50% + 40px);
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 75px;
+  }
+
+  .winnerTeam {
+    margin-bottom: 40px;
+
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  .main.draw .winnerTeam {
+    font-size: 33px;
+    line-height: 60px;
+  }
+
+  .main.draw .teamsScoresContainer {
+    justify-content: center;
+    gap: 350px;
+  }
+
+  .teamsScoresContainer {
+    margin-bottom: 80px;
+  }
+
+  .team1ScoreContainer,
+  .team2ScoreContainer {
+    width: 200px;
+    gap: 7px;
+  }
+
+  .teamName,
+  .teamScore {
+    height: 55px;
+
+    font-size: 26px;
+    line-height: 60px;
+  }
+
+  .teamName.limitExc {
+    font-size: 14px;
+  }
+
+  .replayBtn {
+    width: 200px;
+    height: 55px;
+
+    font-size: 22px;
+    line-height: 50px;
+  }
+}
+
+@media (max-height: 520px) {
+  .winnerVector {
+    width: 150px;
+    bottom: 45px;
+  }
+
+  .drawVector {
+    width: 360px;
+
+    top: calc(50% + 60px);
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 55px;
+  }
+
+  .winnerTeam {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .main.draw .winnerTeam {
+    font-size: 33px;
+    line-height: 60px;
+  }
+
+  .winnerTeam.limitExc {
+    font-size: 20px;
+  }
+
+  .teamsScoresContainer {
+    margin-bottom: 50px;
+  }
+
+  .main.draw .teamsScoresContainer {
+    margin-bottom: 70px;
+  }
+
+  .team1ScoreContainer,
+  .team2ScoreContainer {
+    width: 180px;
+    gap: 7px;
+  }
+
+  .teamName,
+  .teamScore {
+    height: 45px;
+
+    font-size: 22px;
+    line-height: 60px;
+  }
+
+  .teamName.limitExc {
+    font-size: 12px;
+  }
+
+  .replayBtn {
+    width: 180px;
+    height: 45px;
+
+    font-size: 19px;
+    line-height: 50px;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 710px) {
+  .winnerVector {
+    /* z-index: 1; */
+    width: 200px;
+    bottom: 55px;
+  }
+
+  .drawVector {
+    width: 220px;
+
+    top: calc(50% + 100px);
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  .winnerTeam {
+    margin-bottom: 25px;
+
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .main.draw .winnerTeam {
+    margin-bottom: 25px;
+
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  .teamsScoresContainer {
+    margin-bottom: 200px;
+  }
+
+  .main.draw .teamsScoresContainer {
+    gap: 15px;
+  }
+
+  .team1ScoreContainer,
+  .team2ScoreContainer {
+    width: 150px;
+    gap: 10px;
+    flex-grow: unset;
+  }
+
+  .teamName,
+  .teamScore {
+    height: 55px;
+
+    font-size: 23px;
+    line-height: 45px;
+  }
+
+  .teamName.limitExc {
+    font-size: 10px;
+  }
+
+  .replayBtn {
+    width: 200px;
+    height: 55px;
+
+    font-size: 22px;
+    line-height: 50px;
+  }
+}
+
+@media (max-height: 520px) and (max-width: 1000px) {
+  .main.draw .winnerTeam {
+    margin-bottom: 20px;
+  }
+
+  .main.draw .teamsScoresContainer {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-height: 520px) and (max-width: 710px) {
+  .winnerVector {
+    width: 150px;
+    bottom: 45px;
+  }
+
+  .drawVector {
+    top: calc(50% + 55px);
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 55px;
+  }
+
+  .winnerTeam {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .main.draw .winnerTeam {
+    font-size: 33px;
+    line-height: 60px;
+  }
+
+  .teamsScoresContainer {
+    margin-bottom: 50px;
+  }
+
+  .main.draw .teamsScoresContainer {
+    gap: 200px;
+  }
+
+  .team1ScoreContainer,
+  .team2ScoreContainer {
+    width: 180px;
+    gap: 7px;
+  }
+
+  .teamName,
+  .teamScore {
+    height: 45px;
+
+    font-size: 22px;
+    line-height: 60px;
+  }
+
+  .replayBtn {
+    width: 180px;
+    height: 45px;
+
+    font-size: 19px;
+    line-height: 50px;
+  }
+}

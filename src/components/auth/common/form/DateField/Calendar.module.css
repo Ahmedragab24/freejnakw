@@ -1,0 +1,59 @@
+.calendarDropdown {
+  width: 360px;
+  padding: 20px 15px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: initial;
+
+  z-index: 9999;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.calendar {
+  font-family: inherit;
+}
+
+.tileClassName {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: transparent;
+
+  font-size: 14px;
+  letter-spacing: 0.5px;
+
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.tileClassName:hover {
+  background-color: var(--color-sec);
+  color: white;
+}
+
+@media (max-width: 590px) {
+  .calendarDropdown {
+    width: 290px;
+    max-width: 290px;
+    padding: 5px;
+  }
+
+  .tileClassName {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .calendarDropdown {
+    width: 290px;
+    max-width: 290px;
+    padding: 5px;
+  }
+
+  .tileClassName {
+    font-size: 11px;
+  }
+}

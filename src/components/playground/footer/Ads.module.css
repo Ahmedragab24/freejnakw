@@ -1,0 +1,45 @@
+.main {
+  min-width: max-content;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 33.73px;
+  color: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.verticalLine {
+  width: 1px;
+  height: 100%;
+  min-height: 50px;
+  border: none;
+  background: var(--color-sec);
+}
+
+@media (max-width: 920px) {
+  .main {
+    margin: 0 auto;
+
+    order: 3;
+    flex-basis: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    margin: 0;
+
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 16.87px;
+
+    order: unset;
+    flex-basis: unset;
+    justify-content: center;
+    gap: 16px;
+  }
+}

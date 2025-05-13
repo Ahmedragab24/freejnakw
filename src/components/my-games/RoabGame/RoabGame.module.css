@@ -1,0 +1,58 @@
+.main {
+  padding: 0 4.17vw;
+  display: none;
+  scroll-margin: 20px;
+
+  transition: background 0.4s ease;
+}
+
+.main.active {
+  display: block;
+}
+
+body:has(.main.active) {
+  animation: show 0.3s ease forwards;
+}
+
+.gamesCardsContainer {
+  min-height: 800px;
+  padding-bottom: 71px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.noGamesText {
+  width: 100%;
+  height: fit-content;
+  min-height: 150px;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes show {
+  from {
+    background: transparent;
+  }
+  to {
+    background: var(--color-text);
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    padding: 0 3vw;
+  }
+
+  .gamesCardsContainer {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,14 @@
+.main {
+  min-width: 100%;
+  min-height: auto;
+  aspect-ratio: 197 / 75;
+
+  z-index: 2;
+  position: relative;
+
+  flex: 1 0 30%;
+}
+
+.main img {
+  object-fit: 100%;
+}

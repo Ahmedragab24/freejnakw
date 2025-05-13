@@ -1,0 +1,50 @@
+.main {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26.24px;
+  color: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+@media (max-width: 950px) {
+  .main {
+    font-size: 14px;
+  }
+
+  .main img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-height: 700px) {
+  .main {
+    height: calc(100% + 10px);
+  }
+}
+
+@media (max-height: 520px) {
+  .main {
+    width: calc(100% + 40px);
+
+    font-size: 12px;
+  }
+
+  .main img {
+    width: 22px;
+    height: 22px;
+  }
+}

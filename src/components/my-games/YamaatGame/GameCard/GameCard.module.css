@@ -1,0 +1,190 @@
+.main {
+  border-radius: 92.23px;
+  background-color: var(--color-pri);
+
+  overflow: hidden;
+
+  max-width: calc(50% - 25px);
+  flex: 1 0 45%;
+}
+
+.numOfPlays {
+  width: 260px;
+  height: 60px;
+  margin: 0 auto 20px auto;
+  border-radius: 30px;
+  background-color: var(--color-text);
+  border: 0.5px solid #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--color-pri);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameName {
+  margin-bottom: 45px;
+
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 89.95px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.playBtnContainer {
+  margin-bottom: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playBtn {
+  width: 220px;
+  height: 122px;
+  border-radius: 100px;
+  background: var(--color-back-orange);
+
+  position: relative;
+
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 89.95px;
+  color: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main.luckMode .playBtn {
+  width: 320px;
+  background: var(--color-back-yellow);
+}
+
+.main.sectionsMode .playBtn {
+  width: 268px;
+  background: var(--color-sec);
+}
+
+.categoriesContainer {
+  padding: 0 10px;
+  margin-bottom: 78px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 16px;
+  row-gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    border-radius: 80px;
+    max-width: calc(50% - 25px);
+  }
+
+  .numOfPlays {
+    width: 210px;
+
+    font-size: 16px;
+  }
+
+  .gameName {
+    margin-bottom: 30px;
+
+    font-size: 38px;
+    line-height: 75px;
+  }
+
+  .playBtnContainer {
+    margin-bottom: 45px;
+  }
+
+  .playBtn {
+    width: 180px;
+    height: 90px;
+
+    font-size: 36px;
+    line-height: 75px;
+  }
+
+  .main.luckMode .playBtn {
+    width: 280px;
+  }
+
+  .main.sectionsMode .playBtn {
+    width: 228px;
+  }
+
+  .categoriesContainer {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    border-radius: 50px;
+    max-width: calc(50% - 10px);
+  }
+
+  .numOfPlays {
+    width: 180px;
+    height: 50px;
+
+    font-size: 15px;
+  }
+
+  .gameName {
+    margin-bottom: 20px;
+
+    font-size: 32px;
+    line-height: 60px;
+  }
+
+  .playBtnContainer {
+    margin-bottom: 30px;
+  }
+
+  .playBtn {
+    width: 150px;
+    height: 70px;
+
+    font-size: 28px;
+    line-height: 75px;
+  }
+
+  .main.luckMode .playBtn {
+    width: 240px;
+  }
+
+  .main.sectionsMode .playBtn {
+    width: 170px;
+  }
+
+  .categoriesContainer {
+    margin-bottom: 45px;
+
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .categoriesContainer {
+    margin-bottom: 50px;
+
+    column-gap: 4%;
+    row-gap: 25px;
+  }
+}

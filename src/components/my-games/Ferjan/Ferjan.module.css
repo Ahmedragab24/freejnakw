@@ -1,0 +1,63 @@
+.main {
+  padding: 0 11.18vw 100px 11.18vw;
+
+  position: relative;
+
+  transition: background 0.3s ease;
+}
+
+.main.roabMode {
+  background: var(--color-text);
+}
+
+.main.roabMode h2 {
+  transition: color 0.3s ease;
+
+  color: white;
+}
+
+.main.roabMode p {
+  transition: color 0.3s ease, background 0.3s ease;
+
+  background: #9cc5bc29;
+  color: #ffffff;
+}
+
+.title {
+  margin-bottom: 70px !important;
+}
+
+.cardsContainer {
+  z-index: 2;
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+@media (max-width: 570px) {
+  .main {
+    padding: 0 5vw 100px 5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .cardsContainer {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    padding: 100px 5vw;
+    scroll-margin: -50px;
+  }
+
+  .cardsContainer {
+    flex-wrap: nowrap;
+    gap: 47.27px;
+  }
+}

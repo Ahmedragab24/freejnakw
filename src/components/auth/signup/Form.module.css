@@ -1,0 +1,30 @@
+.forgotPassLink {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.98px;
+  color: var(--color-text-2);
+}
+
+.haveAccount {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.98px;
+  text-align: center;
+}
+
+.signinLink {
+  color: var(--color-text-2);
+}
+
+.radioLabel {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.98px;
+  color: var(--color-text-4);
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .haveAccount {
+    margin-top: 10px;
+  }
+}

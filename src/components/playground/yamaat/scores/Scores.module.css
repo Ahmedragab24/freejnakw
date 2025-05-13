@@ -1,0 +1,32 @@
+.main {
+  height: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+@media (min-width: 1100px) {
+  .main {
+    padding: 0 5vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    padding: 5px 0;
+  }
+}
+
+@media (min-height: 800px) {
+  .main {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    column-gap: 16px;
+  }
+}

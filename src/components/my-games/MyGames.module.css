@@ -1,0 +1,112 @@
+.heroSection {
+  padding-bottom: 250px !important;
+}
+
+.roabVector1 {
+  opacity: 0.6;
+  position: absolute;
+  top: 197px;
+  right: -90px;
+}
+
+.roabVector2 {
+  opacity: 0.3;
+  position: absolute;
+  top: 135px;
+  left: -150px;
+}
+
+.roabVector3 {
+  /* opacity: 0.3; */
+  position: absolute;
+  top: 455px;
+  right: 147.5px;
+}
+
+.roabVector4 {
+  /* opacity: 0.3; */
+  position: absolute;
+  top: 876px;
+  left: 103px;
+}
+
+.roabVector5 {
+  opacity: 0.8;
+  position: absolute;
+  top: 1017px;
+  right: 0;
+}
+
+.roabVector6 {
+  opacity: 0.8;
+  position: absolute;
+  top: 1200px;
+  left: 0;
+}
+
+.roabVector7 {
+  opacity: 0.2;
+  position: absolute;
+  top: 1520px;
+  left: 380px;
+}
+
+.roabVector8 {
+  opacity: 1;
+  position: absolute;
+  top: 1756px;
+  left: 686px;
+}
+
+.roabVector9 {
+  opacity: 0.15;
+  position: absolute;
+  top: 1700px;
+  right: -100px;
+}
+
+.roabVector10 {
+  opacity: 0.2;
+  position: absolute;
+  top: 2050px;
+  right: 200px;
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .heroSection {
+    padding-bottom: 130px !important;
+  }
+
+  .roabVectors > img {
+    scale: 0.6;
+  }
+
+  .roabVector5 {
+    opacity: 0.8;
+    position: absolute;
+    top: 800px;
+    right: 0;
+  }
+
+  .roabVector6 {
+    opacity: 0.8;
+    position: absolute;
+    top: 950px;
+    left: -250px;
+  }
+
+  .roabVector8 {
+    opacity: 1;
+    position: absolute;
+    top: 1500px;
+    left: 200px;
+  }
+
+  .roabVector9 {
+    display: none;
+  }
+
+  .roabVector10 {
+    display: none;
+  }
+}

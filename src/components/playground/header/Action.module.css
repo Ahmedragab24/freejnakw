@@ -1,0 +1,144 @@
+.main {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.actionBtn {
+  min-width: max-content;
+  padding: 12px 16px;
+  border-radius: 30px;
+  border: 2px solid var(--color-pri);
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 29.98px;
+  color: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.turnBtn {
+  min-width: 0;
+  max-width: 210px;
+}
+
+.turnBtn span {
+  font-size: 16px;
+}
+
+.turnBtn.limitExc {
+  font-size: 12px;
+  text-align: center;
+}
+
+.main.roabMode .actionBtn {
+  border-color: var(--color-sec);
+}
+
+.exitBtn {
+  border-color: var(--color-back-orange);
+}
+
+.main.roabMode .exitBtn {
+  border-color: var(--color-back-orange);
+}
+
+@media (max-width: 950px) {
+  .actionBtn {
+    padding: 7px 10px;
+
+    font-size: 13px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 665px) {
+  .main {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .actionBtn {
+    border-radius: 10px;
+    padding: 5px 8px;
+
+    font-size: 12px !important;
+    line-height: 15px !important;
+    text-align: center;
+
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .actionBtn img {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    flex-basis: 100%;
+    order: -1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .actionBtn {
+    font-size: 10px !important;
+    line-height: 13px !important;
+  }
+}
+
+@media (max-height: 620px) {
+  .main {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .actionBtn {
+    border-radius: 10px;
+    padding: 5px 8px;
+
+    font-size: 12px !important;
+    line-height: 15px !important;
+    text-align: center;
+
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .actionBtn img {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    padding: 0;
+  }
+
+  .actionBtn {
+    padding: 2px 10px;
+    border-width: 1px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26.24px;
+
+    flex-direction: row;
+  }
+
+  .actionBtn img {
+    display: inline-block;
+  }
+
+  .turnBtn span {
+    display: none;
+  }
+}

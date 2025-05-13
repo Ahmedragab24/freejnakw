@@ -1,0 +1,103 @@
+.main {
+  padding-bottom: 50px;
+
+  z-index: 9999;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.searchForm,
+.buyNewGameBtn {
+  width: 90%;
+  max-width: 260px;
+  height: 70px;
+  border-radius: 30px;
+  padding: 17px 28px;
+}
+
+.searchForm {
+  background-color: var(--color-back-orange);
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.input {
+  height: 50px;
+  min-width: 0;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: right;
+  color: white;
+
+  flex-grow: 1;
+}
+
+.input::placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: right;
+  color: white;
+}
+
+.submitBtn {
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buyNewGameBtn {
+  background-color: var(--color-sec);
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 650px) {
+  .main {
+    padding-bottom: 40px;
+
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .searchForm,
+  .buyNewGameBtn {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 100px;
+    padding: 17px 20px;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .searchForm,
+  .buyNewGameBtn {
+    border: 1px solid #ffffff;
+  }
+}

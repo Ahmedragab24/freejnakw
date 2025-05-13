@@ -1,0 +1,180 @@
+.gameModes {
+  display: flex;
+  align-items: center;
+  gap: 5.69vw;
+}
+
+.activateBox,
+.luckMode {
+  width: 390px;
+  max-width: 390px;
+  height: 70px;
+  padding: 0 24px;
+  border-radius: 100px;
+  background: #9cc5bc29;
+  box-shadow: -1.76px -1.76px 3.51px 0px #0e0b063d inset;
+  cursor: pointer;
+
+  position: relative;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 29.98px;
+  color: var(--color-text-4);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+:where(.activateBox, .luckMode).active {
+  background: #4ea9b4;
+  color: white;
+}
+
+.activateBox.disabled {
+  /* making grey scale */
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.activateInfo,
+.luckModeInfoIcon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-sec);
+  cursor: help;
+
+  font-weight: 600;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+:where(.activateBox, .luckMode).active
+  :where(.activateInfo, .luckModeInfoIcon) {
+  background-color: white;
+  color: var(--color-sec);
+}
+
+.infoPopup {
+  display: none;
+
+  width: 336px;
+  padding: 24px;
+  border-radius: 9px;
+  background: var(--color-text);
+  cursor: initial;
+  pointer-events: none;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.98px;
+  text-align: center;
+  color: white;
+
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 0;
+}
+
+.infoPopup.active {
+  display: block;
+  animation: info-popup 0.3s ease-out forwards;
+}
+
+@keyframes info-popup {
+  0% {
+    transform: translateY(5px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 950px) {
+  .gameModes {
+    gap: 3vw;
+  }
+
+  .activateBox,
+  .luckMode {
+    width: 45vw;
+  }
+
+  .infoPopup {
+    width: 250px;
+    padding: 20px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 590px) {
+  .gameModes {
+    max-width: calc(100vw - 40px);
+    width: 390px;
+    margin: 10px 0;
+  }
+
+  .activateBox,
+  .luckMode {
+    width: calc(100vw - 40px);
+  }
+}
+
+@media (max-width: 460px) {
+  .gameModes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .activateBox,
+  .luckMode {
+    width: calc(100vw - 40px);
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .gameModes {
+    width: 100%;
+
+    justify-content: center;
+    gap: 5.69vw;
+  }
+
+  .activateBox,
+  .luckMode {
+    width: auto;
+    max-width: 320px;
+    height: 60px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 29.98px;
+
+    flex: 1 0 45%;
+  }
+
+  .infoPopup {
+    width: 250px;
+    padding: 20px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+}

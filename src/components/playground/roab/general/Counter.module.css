@@ -1,0 +1,119 @@
+.main {
+  width: 342px;
+  height: 44px;
+  border-radius: 60px;
+  background: var(--color-back-yellow);
+  box-shadow: 0px 4px 4px 0px #00000040;
+
+  position: absolute !important;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 67.46px;
+  color: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 31px;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.recountBtn,
+.pauseBtn {
+  cursor: pointer;
+
+  transition: scale 0.1s ease;
+}
+
+:where(.recountBtn, .pauseBtn):hover {
+  scale: 1.1;
+}
+
+:where(.recountBtn, .pauseBtn):active {
+  scale: 0.9;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    left: unset;
+    right: 31px;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 950px) {
+  .main {
+    width: 200px;
+
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 60px;
+
+    gap: 20px;
+  }
+
+  .recountBtn {
+    width: 25px;
+  }
+
+  .pauseBtn {
+    width: 20px;
+  }
+}
+
+@media (max-width: 550px), (max-height: 700px) {
+  .main {
+    width: 160px;
+    height: 38px;
+
+    bottom: -19px;
+    right: 20px;
+
+    font-size: 21px;
+
+    gap: 10px;
+  }
+
+  .timer img {
+    width: 4.5px;
+    height: auto;
+  }
+
+  .action {
+    gap: 10px;
+  }
+
+  .recountBtn {
+    width: 21px;
+  }
+
+  .pauseBtn {
+    width: 18px;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    right: unset;
+    bottom: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

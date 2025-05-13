@@ -1,0 +1,216 @@
+.main {
+  min-width: 0;
+  padding: 66px 24px 40px;
+  border-radius: 22.47px;
+  box-shadow: 0px 2.81px 5.62px 0px #00000040;
+
+  position: relative;
+
+  color: var(--color-text);
+
+  flex: 1 0 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.discountContainer {
+  width: 155px;
+  height: 99px;
+
+  position: absolute;
+  top: -16px;
+  right: -29px;
+}
+
+.discountPercentage {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 37.48px;
+  text-align: center;
+  color: white;
+}
+
+.discountContainer img {
+  object-fit: contain;
+}
+
+.gamesCount {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 3px 0px #00000040 inset;
+  background-color: white;
+
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--color-text);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  margin-bottom: 3px;
+
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 30px;
+}
+
+.details {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.98px;
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priceContainer {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 33.73px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 56.22px;
+}
+
+.purchaseBtn {
+  width: 67px;
+  height: 34px;
+  border-radius: 100px;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 26.24px;
+  color: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: scale 0.2s ease;
+}
+
+.purchaseBtn:hover {
+  scale: 1.1;
+}
+
+.purchaseBtn:active {
+  scale: 0.9;
+}
+
+@media (max-width: 1000px) {
+  .main {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 550px) {
+  .main {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    padding: 46.2px 16.8px 38px;
+    border-radius: 15.73px;
+
+    flex: 1 0 20%;
+    gap: 11.2px;
+  }
+
+  .discountContainer {
+    width: 108.5px;
+    height: 69.21px;
+
+    top: -11.2px;
+    right: -20.3px;
+  }
+
+  .discountPercentage {
+    top: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26.24px;
+  }
+
+  .gamesCount {
+    width: 77px;
+    height: 77px;
+    margin-bottom: 0;
+    box-shadow: 2.1px 2.1px 2.1px 0px #00000040 inset;
+
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  .number {
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 900;
+  }
+
+  .details {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22.49px;
+
+    flex-grow: 1;
+  }
+
+  .priceContainer {
+    font-size: 12.6px;
+    font-weight: 600;
+    line-height: 23.61px;
+  }
+
+  .price {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  .purchaseBtn {
+    width: 47px;
+    height: 24px;
+
+    font-size: 9.8px;
+    font-weight: 400;
+    line-height: 18.37px;
+  }
+}
+
+@media (max-width: 750px) and (max-height: 520px) {
+  .main {
+    padding: 46.2px 12px 25px;
+  }
+}

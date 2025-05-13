@@ -1,0 +1,43 @@
+.main {
+  padding: 0 4.17vw;
+  scroll-margin: 20px;
+
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.gamesCardsContainer {
+  margin-bottom: 71px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.noGamesText {
+  width: 100%;
+  height: fit-content;
+  min-height: 150px;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .main {
+    padding: 0 3vw;
+  }
+
+  .gamesCardsContainer {
+    gap: 20px;
+  }
+}

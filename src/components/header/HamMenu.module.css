@@ -1,0 +1,68 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-sec);
+
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  transition: left 0.3s ease;
+}
+
+.active {
+  left: 0;
+}
+
+.closeBtn {
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  transition: scale 0.1s ease;
+}
+
+.closeBtn:active {
+  scale: 0.9;
+}
+
+@media (max-width: 900px) and (min-height: 520px) {
+  .main {
+    display: flex;
+  }
+
+  .hamMenuScore {
+    background-color: var(--color-pri);
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    display: flex;
+    gap: 15px;
+  }
+
+  .hamMenuScore img {
+    border-radius: 50%;
+    background-color: var(--color-sec);
+  }
+
+  .hamMenuScore p {
+    letter-spacing: 0.4px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.8);
+
+    gap: 10px;
+  }
+
+  .hamMenuScore span {
+    color: var(--color-sec);
+  }
+}

@@ -1,0 +1,87 @@
+.main {
+  padding: 0 11.18vw 100px 11.18vw;
+
+  position: relative;
+
+  transition: background 0.3s ease;
+}
+
+.main.roabMode {
+  background: var(--color-text);
+}
+
+.main.roabMode h2 {
+  transition: color 0.3s ease;
+
+  color: white;
+}
+
+.main.roabMode p {
+  transition: color 0.3s ease, background 0.3s ease;
+
+  background: #9cc5bc29;
+  color: #ffffff;
+}
+
+.description {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 60px auto;
+  padding: 24px;
+  border-radius: 30px;
+  background: #9cc5bc29;
+  box-shadow: 0px 4px 4px 0px #00000040;
+
+  z-index: 6;
+  position: relative;
+
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 44.98px;
+  color: #0e0b06;
+  text-align: center;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+@media (max-width: 570px) {
+  .main {
+    padding: 0 5vw 100px 5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .cardsContainer {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    padding: 100px 5vw 75px;
+    scroll-margin: -30px;
+  }
+
+  .description {
+    margin-bottom: 12px;
+    padding: 12px 24px;
+    background: #9cc5bc29;
+    box-shadow: none;
+
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 29.98px;
+    color: #4e554e;
+  }
+
+  .cardsContainer {
+    flex-wrap: nowrap;
+    gap: 47.27px;
+  }
+}

@@ -1,0 +1,27 @@
+.main {
+  /* padding-top: 100px; */
+
+  position: relative;
+  overflow: hidden;
+}
+
+.topRightVector,
+.bottomRightVector,
+.bottomLeftVector {
+  position: absolute;
+}
+
+.topRightVector {
+  top: -50px;
+  right: -200px;
+}
+
+.bottomRightVector {
+  bottom: 200px;
+  right: -100px;
+}
+
+.bottomLeftVector {
+  bottom: 50px;
+  left: -200px;
+}

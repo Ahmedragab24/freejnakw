@@ -1,0 +1,27 @@
+.main {
+  margin-bottom: 40px;
+
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 89.95px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.main.authed {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 44.98px;
+  }
+
+  .main.authed {
+    margin-bottom: 26px;
+  }
+}

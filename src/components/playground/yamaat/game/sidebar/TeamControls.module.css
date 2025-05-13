@@ -1,0 +1,248 @@
+.main {
+  min-width: 180px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nameAndScore {
+  min-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name {
+  height: 54px;
+  border-radius: 47.39px;
+  background-color: var(--color-sec);
+
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 52.47px;
+  color: var(--color-text);
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name.limitExc {
+  font-size: 18px;
+}
+
+.main:last-child .name {
+  background-color: var(--color-pri);
+}
+
+.scoreContainer {
+  min-width: 100%;
+  height: 54px;
+  padding: 0 16.5px;
+  border-radius: 31.83px;
+  background: white;
+  border: 3px solid var(--color-sec);
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 44.98px;
+  color: var(--color-text);
+  direction: ltr;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main:last-child .scoreContainer {
+  border-color: var(--color-pri);
+}
+
+.helpTitle {
+  margin-bottom: 15.5px;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 44.98px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.helpChances {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.helpChances img {
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .main {
+    gap: 10px;
+  }
+
+  .nameAndScore {
+    gap: 5px;
+  }
+
+  .name {
+    height: 34px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26.24px;
+  }
+
+  .name.limitExc {
+    font-size: 13px;
+  }
+
+  .scoreContainer {
+    height: 34px;
+    padding: 0 4.5px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 44.98px;
+    color: var(--color-text);
+  }
+
+  .helpTitle {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  .helpChances {
+    gap: 10px;
+  }
+
+  .helpChances img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 690px) {
+  .main {
+    min-width: 100px;
+    flex-grow: 1;
+  }
+
+  .nameAndScore {
+    flex-grow: 1;
+  }
+
+  .name.limitExc {
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 700px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .nameAndScore {
+    gap: 5px;
+  }
+
+  .name {
+    height: 34px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26.24px;
+  }
+
+  .name.limitExc {
+    font-size: 14px;
+  }
+
+  .scoreContainer {
+    height: 34px;
+    padding: 0 4.5px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 44.98px;
+    color: var(--color-text);
+  }
+
+  .helpTitle {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .helpChances {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .helpChances img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-height: 520px) {
+  .main {
+    min-width: 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nameAndScore {
+    gap: 5px;
+  }
+
+  .name {
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .name.limitExc {
+    font-size: 12px;
+  }
+
+  .scoreContainer {
+    height: 30px;
+
+    font-size: 16px;
+  }
+
+  .helpTitle {
+    display: none;
+  }
+
+  .helpChances {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .helpChances img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-height: 475px) and (max-width: 690px) {
+  .main {
+    flex-grow: unset;
+  }
+}

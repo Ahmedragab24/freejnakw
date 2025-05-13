@@ -1,0 +1,22 @@
+.main {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 67.46px;
+  text-align: center;
+  color: #0c1421;
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    margin-bottom: 6px;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 44.98px;
+    text-align: center;
+  }
+}

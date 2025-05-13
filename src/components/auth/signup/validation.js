@@ -1,0 +1,70 @@
+// import { parsePhoneNumberFromString } from "libphonenumber-js";
+
+// Function to validate a phone number
+// function validatePhoneNumber(phoneNumber, defaultCountry) {
+//   const phoneNumberObj = parsePhoneNumberFromString(
+//     phoneNumber,
+//     defaultCountry
+//   );
+//   if (phoneNumberObj && phoneNumberObj.isValid()) {
+//     return {
+//       isValid: true,
+//       country: phoneNumberObj.country, // Detected country
+//       formatted: phoneNumberObj.formatInternational(), // Formatted number
+//     };
+//   }
+//   return { isValid: false, country: null, formatted: null };
+// }
+
+export default function validateForm(data) {
+  const errors = {};
+
+  // Validate name
+  if (!data.name.trim()) {
+    errors.name = "الاسم مطلوب.";
+  }
+
+  // Validate username
+  if (!data.username.trim()) {
+    errors.username = "اسم المستخدم مطلوب.";
+  }
+
+  // Validate email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!data.email.trim()) {
+    errors.email = "البريد الإلكتروني مطلوب.";
+  } else if (!emailRegex.test(data.email)) {
+    errors.email = "صيغة البريد الإلكتروني غير صحيحة.";
+  }
+
+  // // Validate phone
+  // const phoneRegex = /^[0-9]{10,15}$/; // Adjust regex as per your requirements
+  // if (!data.phone.trim()) {
+  //   errors.phone = "رقم الهاتف مطلوب.";
+  // } else if (!validatePhoneNumber(data.countryCode + data.phone).isValid) {
+  //   errors.phone = "رقم الهاتف غير صحيح.";
+  // }
+
+  // // Validate birth date
+  // if (!data.birthDate.trim()) {
+  //   errors.birthDate = "تاريخ الميلاد مطلوب.";
+  // }
+
+  // Validate password
+  if (!data.password.trim()) {
+    errors.password = "كلمة المرور مطلوبة.";
+  } else if (data.password.length < 8) {
+    errors.password = "يجب أن تكون كلمة المرور 8 أحرف على الأقل.";
+  }
+
+  // Validate password confirmation
+  if (!data.passwordConfirm.trim()) {
+    errors.passwordConfirm = "تأكيد كلمة المرور مطلوب.";
+  } else if (data.password !== data.passwordConfirm) {
+    errors.passwordConfirm = "كلمتا المرور غير متطابقتين.";
+  }
+
+  // Gender and country code don't require validation if defaults are allowed
+
+  return errors;
+}

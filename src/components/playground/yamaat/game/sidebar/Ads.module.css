@@ -1,0 +1,54 @@
+.main {
+  min-width: 100%;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 33.73px;
+  color: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.verticalLine {
+  width: 1px;
+  height: 100%;
+  border: none;
+  background: var(--color-pri);
+}
+
+.ad {
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .main {
+    min-width: 0;
+    font-size: 14px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 690px) {
+  .main {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-height: 520px) and (max-width: 950px) {
+  .main {
+    align-self: center;
+    font-size: 12px;
+    gap: 7px;
+  }
+}
+
+@media (max-height: 520px) and (max-width: 690px) {
+  .main {
+    order: unset;
+    flex-basis: unset;
+  }
+}

@@ -1,0 +1,59 @@
+.main {
+  width: 14px;
+  height: 100vh;
+  padding: 2px 0;
+  padding-top: 90vh;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+.thumb {
+  width: 0;
+  padding: 3px;
+  background-color: var(--color-text-1);
+  background-clip: content-box;
+  border-radius: 100px;
+  margin: 0 auto;
+  /* box-shadow: 0 0 0 1px white; */
+
+  transition: width 0.4s var(--timing-func-elastic);
+}
+
+.main:hover {
+  opacity: 1;
+}
+
+.main:hover .thumb {
+  width: 100%;
+}
+
+.main.show {
+  opacity: 1;
+}
+
+.main.show .thumb {
+  width: 100%;
+}
+
+:where(html, body, *):has(.main.show) {
+  scroll-behavior: unset;
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    display: none;
+  }
+}

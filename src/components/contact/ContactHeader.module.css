@@ -1,0 +1,119 @@
+.header {
+  margin-top: 80px;
+  margin-bottom: 70px;
+  padding: 0 20px;
+
+  z-index: 3;
+  position: relative;
+}
+
+.title {
+  margin-bottom: 40px;
+
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 74.96px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.description {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 56.22px;
+  text-align: center;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.emailLink {
+  margin: 20px 0 40px;
+
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 44.98px;
+  text-decoration: underline;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .title {
+    margin-bottom: 20px;
+
+    font-size: 35px;
+    line-height: 74.96px;
+  }
+
+  .description {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 45px;
+  }
+
+  .emailLink {
+    margin: 20px 0;
+
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 44.98px;
+    text-decoration: underline;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .header {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .title {
+    margin-bottom: 6px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 44.98px;
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 29.98px;
+
+    gap: 12px;
+  }
+
+  .emailLink {
+    margin: 5px 0;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 29.98px;
+  }
+
+  .description img,
+  .emailLink img {
+    width: 24px;
+    height: auto;
+  }
+
+  .description a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

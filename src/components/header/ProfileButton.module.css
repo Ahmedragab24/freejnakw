@@ -1,0 +1,64 @@
+.main {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 5px;
+  background-color: var(--color-sec);
+  border-radius: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+
+  transition: width 0.4s ease, font-weight 0.4s var(--timing-func-elastic),
+    padding 0.4s ease;
+}
+
+.userIcon {
+  width: 40px;
+  height: 40px;
+
+  transition: width 0.4s var(--timing-func-elastic),
+    height 0.4s var(--timing-func-elastic),
+    scale 0.4s var(--timing-func-elastic);
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 29.98px;
+
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name.alignLeft {
+  direction: ltr;
+}
+
+.main:hover {
+  width: 180px;
+  padding: 0 20px;
+}
+
+.main:hover .userIcon {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main:hover {
+    width: 50px;
+    padding: 0 5px;
+  }
+
+  .main:hover .userIcon {
+    width: 40px;
+    height: 40px;
+    scale: 1.1;
+  }
+}

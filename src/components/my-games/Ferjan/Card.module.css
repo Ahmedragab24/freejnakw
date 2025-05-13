@@ -1,0 +1,111 @@
+.main {
+  min-width: 204px;
+  height: 218px;
+  border-radius: 17.64px;
+  box-shadow: 0px 2.35px 2.35px 0px #00000040;
+  border: 1px solid #d9d9d917;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: box-shadow 0.2s var(--timing-func-elastic);
+}
+
+.main.active {
+  box-shadow: 0 0 0 5px var(--color-sec);
+}
+
+.main.roab.active {
+  box-shadow: 0 0 0 5px white;
+}
+
+.gameImage {
+  position: relative;
+  z-index: 1;
+
+  transition: scale 0.5s var(--timing-func-elastic);
+}
+
+.main:hover .gameImage {
+  scale: 1.25;
+}
+
+.vector1,
+.vector2,
+.vector3,
+.vector4 {
+  z-index: 2;
+  position: absolute;
+}
+
+.vector1 {
+  top: 16px;
+  right: -13.5px;
+
+  opacity: 0.7;
+}
+
+.vector2 {
+  top: 9px;
+  left: 7px;
+
+  opacity: 0.1;
+}
+
+.vector3 {
+  bottom: -3px;
+  right: -4px;
+
+  opacity: 0.3;
+}
+
+.vector4 {
+  bottom: -5px;
+  left: -10px;
+
+  opacity: 0.2;
+}
+
+@media (max-width: 500px) {
+  .main {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main {
+    min-width: 0;
+    width: 180px;
+    height: 191px;
+    border-radius: 25.94px;
+  }
+
+  .gameImage {
+    width: 141px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .vector1,
+  .vector2,
+  .vector3,
+  .vector4 {
+    width: auto;
+    height: 69.47px;
+  }
+
+  .vector1 {
+    top: 10px;
+    right: -3px;
+  }
+
+  .vector2 {
+    top: 5px;
+    left: 3px;
+  }
+}

@@ -1,0 +1,105 @@
+.main {
+  padding: 30px 2vw 10px;
+
+  flex-grow: 1;
+  display: flex;
+  gap: 2.5vw;
+}
+
+.roabState {
+  padding: 40px 1.5vw;
+  background-color: var(--color-text);
+}
+
+@media (max-width: 950px) {
+  .main {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .main {
+    padding-top: 20px;
+    gap: 10px;
+  }
+
+  .roabState {
+    padding: 20px 1.5vw 20px;
+  }
+}
+
+@media (max-height: 700px) {
+  .main {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 690px) and (min-height: 520px) {
+  .main {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-height: 520px) {
+  .main {
+    padding: 20px 2vw 0;
+  }
+
+  .roabState {
+    padding: 20px 1.5vw 0;
+  }
+}
+
+.roabVector1 {
+  width: 31.11vw;
+
+  position: fixed;
+  top: 25.83vh;
+  right: 4.16vw;
+}
+
+.roabVector2 {
+  width: 13.96vw;
+  opacity: 0.4;
+
+  z-index: 2;
+  position: fixed;
+  top: 3.54vh;
+  right: 37.43vw;
+}
+
+.roabVector3 {
+  width: 38.54vw;
+  opacity: 0.4;
+
+  z-index: 2;
+  position: fixed;
+  top: -13.75vh;
+  right: 59.03vw;
+}
+
+.roabVector4 {
+  width: 52.08vw;
+  opacity: 0.16;
+
+  position: fixed;
+  top: 17.08vh;
+  right: 61.11vw;
+}
+
+.roabVector5 {
+  width: 7.083vw;
+  opacity: 0.8;
+
+  position: fixed;
+  top: 8.645vh;
+  right: -5px;
+}
+
+@media (max-width: 1150px) and (max-height: 520px) {
+  .main,
+  .roabState {
+    padding: 10px 2vw 0;
+  }
+}

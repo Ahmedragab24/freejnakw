@@ -1,0 +1,133 @@
+.roabIntroPopup {
+  width: 750px;
+  max-width: 95%;
+  padding: 30px 64px;
+  border-radius: 16px;
+  background-color: var(--color-text);
+  border: 1px solid #0000001f;
+  box-shadow: 0px 8px 32px 0px #00000026, 0px 4px 12px 0px #00000014;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.closeBtn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0.5;
+
+  font-size: 35px;
+  color: white;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.15s ease;
+}
+
+.closeBtn:hover {
+  opacity: 1;
+}
+
+.content {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 44.98px;
+  text-align: center;
+  color: white;
+}
+
+.note1,
+.note2,
+.note3 {
+  display: block;
+  margin-top: 10px;
+
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.note1 {
+  color: var(--color-back-orange);
+}
+
+.note2 {
+  color: var(--color-sec);
+}
+
+.note3 {
+  margin-top: 50px;
+  color: var(--color-back-yellow);
+}
+
+.introBackdrop {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.introVector {
+  scale: 1.5;
+  opacity: 0.1;
+  position: absolute;
+  top: 20%;
+  left: -5%;
+}
+
+@media (max-width: 800px) {
+  .roabIntroPopup {
+    width: 550px;
+    padding: 20px;
+  }
+
+  .content {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .note1,
+  .note2,
+  .note3 {
+    font-size: 22px;
+  }
+
+  .note3 {
+    margin-top: 30px;
+  }
+
+  .introVector {
+    scale: 1.4;
+    left: -60px;
+  }
+}
+
+@media (max-height: 550px) {
+  .roabIntroPopup {
+    width: 550px;
+    padding: 20px 50px;
+  }
+
+  .content {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .note1,
+  .note2,
+  .note3 {
+    margin-top: 5px;
+    font-size: 22px;
+  }
+
+  .note3 {
+    margin-top: 20px;
+  }
+
+  .introVector {
+    scale: 1.4;
+  }
+}
